@@ -179,6 +179,52 @@ MANZER.filter = function (){
 },
 
 /* ==================================================
+	Contact Form
+================================================== */
+
+MANZER.contactForm = function(){
+	var $contactForm = $('#contact-form');
+	$contactForm.submit(function(e) {
+		e.preventDefault();
+		// Remove any existing alerts first
+		$contactForm.find('.alert').remove();
+		
+		$.ajax({
+			url: 'https://formspree.io/f/mwpojbzz', // Formspree endpoint
+			method: 'POST',
+			data: $(this).serialize(),
+			dataType: 'json',
+			beforeSend: function() {
+				$contactForm.append('<div class="alert alert-standard">Sending message…</div>');
+			},
+			success: function(data) {
+				$contactForm.find('.alert-standard').fadeOut(500, function() {
+					$(this).remove();
+					$contactForm.append('<div class="alert alert-success">Message sent!</div>');
+					$contactForm[0].reset();
+					$contactForm.find('.success').removeClass("success").addClass("clean");
+					$contactForm.find('.button-area').removeClass("button-area").addClass("remove-button-area");
+					// Remove success message after delay
+					$contactForm.find('.alert-success').delay(7000).fadeOut(1500, function() {
+						$(this).remove();
+					});
+				});
+			},
+			error: function(err) {
+				$contactForm.find('.alert-standard').remove();
+				$contactForm.append('<div class="alert alert-error">Oops, there was an error.</div>');
+				// Remove error message after delay
+				$contactForm.find('.alert-error').delay(7000).fadeOut(1500, function() {
+					$(this).remove();
+				});
+			},
+			cache: false
+		});
+	});
+
+}
+
+/* ==================================================
 	Skill Chart
 ================================================== */
 
