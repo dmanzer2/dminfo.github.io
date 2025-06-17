@@ -844,6 +844,10 @@ ul.chart {
 
 .chart-horiz .chart li.past .number { color: #7F8289; }
 
+.profile li { 
+	line-height: 28px;
+}
+
 .profile-name {
 	margin-bottom: 15px;
 }
