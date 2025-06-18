@@ -95,7 +95,7 @@
   <div class="sticky-nav">
     <a id="mobile-nav" class="menu-nav" href="#menu-nav"></a>
     <div id="logo">
-      <a id="goUp" href="#home-slider" title="David Manzer | Designer | Front End Developer" class="slider-name">David Manzer</a>
+      <a id="goUp" href="#home-slider" title="David Manzer | Front End Developer UI/UX Specialist" class="slider-name">David Manzer</a>
     </div>
     <nav id="menu">
       <ul id="menu-nav">
@@ -131,12 +131,12 @@
         <nav id="options" class="work-nav">
           <ul id="filters" class="option-set" data-option-key="filter">
             <li class="type-work">Type of Work</li>
-            <li><a href="#filter" data-option-value=".layout" class="selected" alt="David Manzer - Layout/Advertising samples">Layout/Advertising</a></li>
+            <li><a href="#filter" data-option-value=".web" class="selected" alt="David Manzer - Web Development samples">Web Development</a></li>
+            <li><a href="#filter" data-option-value=".email" alt="David Manzer - email Marketing samples">email Marketing</a></li>
+            <li><a href="#filter" data-option-value=".layout" alt="David Manzer - Layout/Advertising samples">Layout/Advertising</a></li>
             <li><a href="#filter" data-option-value=".identity" alt="David Manzer - Identity/Logos samples">Identity/Logos</a></li>
             <li><a href="#filter" data-option-value=".illustration" alt="David Manzer - Digital Illustration samples">Digital Illustration</a></li>
             <li><a href="#filter" data-option-value=".package" alt="David Manzer - Package Design samples">Package Design</a></li>
-            <li><a href="#filter" data-option-value=".web" alt="David Manzer - Web Development samples">Web Development</a></li>
-            <li><a href="#filter" data-option-value=".email" alt="David Manzer - email Marketing samples">email Marketing</a></li>
             <li><a href="#filter" data-option-value=".photography" alt="David Manzer - Creative Photography samples">Creative Photography</a></li>
             <li><a href="#filter" data-option-value=".fonts" alt="David Manzer - Font Development samples">Font Development</a></li>
             <li><a href="#filter" data-option-value=".placeholder">&nbsp;</a></li>
@@ -148,6 +148,28 @@
         <div class="row">
           <section id="projects">
             <ul id="thumbs" ng-controller="WorkController">
+
+              <!--Web Start-->
+              <li class="item-thumbs span3 clearfix web" ng-repeat="item in web" style="min-height:183px; display:block;">
+                <!-- Full Image -->
+                <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="{{item.name}}" ng-href="img/work/web-development/full/{{item.shortname}}-full.jpg" alt="{{item.name}}">
+                  <span class="overlay-img"></span>
+                  <span class="overlay-img-thumb font-icon-plus"></span>
+                </a>
+                <!-- Thumb Image and Description -->
+                <img ng-src="img/work/web-development/thumbs/{{item.shortname}}.jpg" alt="<i class='fa fa-question-circle'></i>&nbsp;&nbsp; {{item.description}} <br /><i class='fa fa-desktop'></i>&nbsp;&nbsp;Medium: {{item.medium}}">
+              </li>
+
+              <!-- Email Start -->
+              <li class="item-thumbs span3 clearfix email" ng-repeat="item in email" style="min-height:183px; display:block;">
+                <!-- Full Image -->
+                <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="{{item.name}}" ng-href="img/work/email-development/full/{{item.shortname}}-full.jpg" alt="{{item.name}}">
+                  <span class="overlay-img"></span>
+                  <span class="overlay-img-thumb font-icon-plus"></span>
+                </a>
+                <!-- Thumb Image and Description -->
+                <img ng-src="img/work/email-development/thumbs/{{item.shortname}}.jpg" alt="<i class='fa fa-question-circle'></i>&nbsp;&nbsp; {{item.description}} <br /><i class='fa fa-envelope-o'></i>&nbsp;&nbsp;Medium: {{item.medium}}">
+              </li>
 
               <!-- layout Items -->
             	<li class="item-thumbs span3 clearfix layout" ng-repeat="item in layout" style="min-height:183px; display:block;">
@@ -191,28 +213,6 @@
                 </a>
                 <!-- Thumb Image and Description -->
                 <img ng-src="img/work/package-design/thumbs/{{item.shortname}}.jpg" alt="<i class='fa fa-question-circle'></i>&nbsp;&nbsp; {{item.description}} <br /><i class='fa fa-coffee'></i>&nbsp;&nbsp;Medium: {{item.medium}}">
-              </li>
-
-              <!--Web Start-->
-              <li class="item-thumbs span3 clearfix web" ng-repeat="item in web" style="min-height:183px; display:block;">
-                <!-- Full Image -->
-                <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="{{item.name}}" ng-href="img/work/web-development/full/{{item.shortname}}-full.jpg" alt="{{item.name}}">
-                  <span class="overlay-img"></span>
-                  <span class="overlay-img-thumb font-icon-plus"></span>
-                </a>
-                <!-- Thumb Image and Description -->
-                <img ng-src="img/work/web-development/thumbs/{{item.shortname}}.jpg" alt="<i class='fa fa-question-circle'></i>&nbsp;&nbsp; {{item.description}} <br /><i class='fa fa-desktop'></i>&nbsp;&nbsp;Medium: {{item.medium}}">
-              </li>
-
-              <!-- Email Start -->
-              <li class="item-thumbs span3 clearfix email" ng-repeat="item in email" style="min-height:183px; display:block;">
-                <!-- Full Image -->
-                <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="{{item.name}}" ng-href="img/work/email-development/full/{{item.shortname}}-full.jpg" alt="{{item.name}}">
-                  <span class="overlay-img"></span>
-                  <span class="overlay-img-thumb font-icon-plus"></span>
-                </a>
-                <!-- Thumb Image and Description -->
-                <img ng-src="img/work/email-development/thumbs/{{item.shortname}}.jpg" alt="<i class='fa fa-question-circle'></i>&nbsp;&nbsp; {{item.description}} <br /><i class='fa fa-envelope-o'></i>&nbsp;&nbsp;Medium: {{item.medium}}">
               </li>
 
               <!-- Photography Start -->

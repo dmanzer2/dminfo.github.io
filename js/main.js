@@ -136,7 +136,7 @@ MANZER.filter = function (){
 		$container.imagesLoaded(function() {
 			$container.isotope({
 			  // options
-				filter: '.layout',
+				filter: '.web',
 			  animationEngine: 'best-available',
 			  itemSelector : '.item-thumbs',
 			  layoutMode : 'fitRows'
