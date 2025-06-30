@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Prepared for: Twin Pines AV</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
@@ -16,6 +17,18 @@
       background-color: #FAF9F6;
       font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
       font-size: 1em;
+      min-font-size: 16px;
+    }
+    #markdown-content {
+      font-size: 1.1em;
+      min-font-size: 16px;
+      word-break: break-word;
+    }
+    @media (max-width: 600px) {
+      body, #markdown-content {
+        font-size: 1.05em;
+        min-font-size: 16px;
+      }
     }
   </style>
   <script>
