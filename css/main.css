@@ -72,6 +72,10 @@ hr {
 	margin: 50px 0;
 }
 
+.my-adjust {
+	margin: 1rem !important;
+}
+
 .align_left{
 	float:left;
 	margin:0 25px 0 0px!important;
