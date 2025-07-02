@@ -24,7 +24,7 @@
 <!--[if IEMobile]>  <meta http-equiv="cleartype" content="on">  <![endif]-->
 
 <!--! combine minified styles -->
-<link href="css/style.css" rel="stylesheet">
+<!-- <link href="css/style.css" rel="stylesheet"> -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/main.css" rel="stylesheet">
 <link href="css/supersized.css" rel="stylesheet">
@@ -34,8 +34,8 @@
 <link href="css/font-awesome.css" rel="stylesheet">
 <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
 <link href="css/responsive.css" rel="stylesheet">
-<link href="css/supersized.css" rel="stylesheet">
-<link href="css/supersized.shutter.css" rel="stylesheet">
+<!-- <link href="css/supersized.css" rel="stylesheet"> -->
+<!-- <link href="css/supersized.shutter.css" rel="stylesheet"> -->
 <!--! Google Font -->
 <link href='//fonts.googleapis.com/css?family=Lato:400,700,300,900' rel='stylesheet' type='text/css'>
 
@@ -70,7 +70,7 @@
 <!--! Start Splash Screen -->
 <div class="ole">
   <section id="jSplash">
-  	<div id="circle"></div>
+    <div id="circle"></div>
   </section>
 </div>
 <!--! End of Splash Screen -->
@@ -81,7 +81,7 @@
   <h1 class="slider-text">
     <div id="slidecaption"></div>
   </h1>
-	<div class="control-nav">
+  <div class="control-nav">
     <a id="prevslide" class="load-item"><i class="font-icon-arrow-simple-left"></i></a>
     <a id="nextslide" class="load-item"><i class="font-icon-arrow-simple-right"></i></a>
     <ul id="slide-list"></ul>
@@ -114,7 +114,7 @@
 
 <!--! development Section -->
 <div id="dev" name="work" class="page">
-	<div class="container">
+  <div class="container">
 
     <div class="row">
       <div class="span12">
@@ -153,7 +153,7 @@
 
 <!--! Work Section -->
 <div id="work" name="work" class="page-alternate">
-	<div class="container">
+  <div class="container">
 
     <div class="row">
       <div class="span12">
@@ -166,8 +166,8 @@
 
     <!--! Portfolio Category Area -->
     <div class="row">
-    	<div class="span3">
-      	<!-- Filter Project-->
+      <div class="span3">
+        <!-- Filter Project-->
         <nav id="options" class="work-nav">
           <ul id="filters" class="option-set" data-option-key="filter">
             <li class="type-work">Type of Work</li>
@@ -195,9 +195,10 @@
                 <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="{{item.name}}" ng-href="img/work/web-development/full/{{item.shortname}}-full.jpg" alt="{{item.name}}">
                   <span class="overlay-img"></span>
                   <span class="overlay-img-thumb font-icon-plus"></span>
+                  <span class="sr-only">View full image: {{item.name}} (Web Development)</span>
                 </a>
                 <!-- Thumb Image and Description -->
-                <img ng-src="img/work/web-development/thumbs/{{item.shortname}}.jpg" alt="<i class='fa fa-question-circle'></i>&nbsp;&nbsp; {{item.description}} <br /><i class='fa fa-desktop'></i>&nbsp;&nbsp;Medium: {{item.medium}}">
+              <img ng-src="img/work/web-development/thumbs/{{item.shortname}}.jpg" ng-attr-alt="{{item.name}} - {{item.description}} (Web Development)" loading="lazy">
               </li>
 
               <!-- Email Start -->
@@ -206,20 +207,22 @@
                 <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="{{item.name}}" ng-href="img/work/email-development/full/{{item.shortname}}-full.jpg" alt="{{item.name}}">
                   <span class="overlay-img"></span>
                   <span class="overlay-img-thumb font-icon-plus"></span>
+                  <span class="sr-only">View full image: {{item.name}} (Email Marketing)</span>
                 </a>
                 <!-- Thumb Image and Description -->
-                <img ng-src="img/work/email-development/thumbs/{{item.shortname}}.jpg" alt="<i class='fa fa-question-circle'></i>&nbsp;&nbsp; {{item.description}} <br /><i class='fa fa-envelope-o'></i>&nbsp;&nbsp;Medium: {{item.medium}}">
+              <img ng-src="img/work/email-development/thumbs/{{item.shortname}}.jpg" ng-attr-alt="{{item.name}} - {{item.description}} (Email Marketing)" loading="lazy">
               </li>
 
               <!-- layout Items -->
-            	<li class="item-thumbs span3 clearfix layout" ng-repeat="item in layout" style="min-height:183px; display:block;">
-              	<!-- Full Image -->
-              	<a class="hover-wrap fancybox" data-fancybox-group="gallery" title="{{item.name}}" ng-href="img/work/layout-design/full/{{item.shortname}}-full.jpg" alt="{{item.name}}">
-                	<span class="overlay-img"></span>
+              <li class="item-thumbs span3 clearfix layout" ng-repeat="item in layout" style="min-height:183px; display:block;">
+                <!-- Full Image -->
+                <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="{{item.name}}" ng-href="img/work/layout-design/full/{{item.shortname}}-full.jpg" alt="{{item.name}}">
+                  <span class="overlay-img"></span>
                   <span class="overlay-img-thumb font-icon-plus"></span>
+                  <span class="sr-only">View full image: {{item.name}} (Layout/Advertising)</span>
                 </a>
                 <!-- Thumb Image and Description -->
-                <img ng-src="img/work/layout-design/thumbs/{{item.shortname}}.jpg" alt="<i class='fa fa-question-circle'></i>&nbsp;&nbsp; {{item.description}} <br /><i class='fa fa-object-group'></i>&nbsp;&nbsp;Medium: {{item.medium}}">
+              <img ng-src="img/work/layout-design/thumbs/{{item.shortname}}.jpg" ng-attr-alt="{{item.name}} - {{item.description}} (Layout/Advertising)" loading="lazy">
               </li>
 
               <!-- Identity Items -->
@@ -228,9 +231,10 @@
                 <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="{{item.name}}" ng-href="img/work/logos-branding/full/{{item.shortname}}-full.jpg" alt="{{item.name}}">
                   <span class="overlay-img"></span>
                   <span class="overlay-img-thumb font-icon-plus"></span>
+                  <span class="sr-only">View full image: {{item.name}} (Identity/Logos)</span>
                 </a>
                 <!-- Thumb Image and Description -->
-                <img ng-src="img/work/logos-branding/thumbs/{{item.shortname}}.jpg" alt="<i class='fa fa-question-circle'></i>&nbsp;&nbsp; {{item.description}} <br /><i class='fa fa-rocket'></i>&nbsp;&nbsp;Medium: {{item.medium}}">
+                <img ng-src="img/work/logos-branding/thumbs/{{item.shortname}}.jpg" ng-attr-alt="{{item.name}} - {{item.description}} (Identity/Logos)" loading="lazy">
               </li>
 
               <!--Illustrations Start-->
@@ -239,9 +243,10 @@
                 <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="{{item.name}}" ng-href="img/work/illustrations/full/{{item.shortname}}-full.jpg" alt="{{item.name}}">
                   <span class="overlay-img"></span>
                   <span class="overlay-img-thumb font-icon-plus"></span>
+                  <span class="sr-only">View full image: {{item.name}} (Illustration)</span>
                 </a>
                 <!-- Thumb Image and Description -->
-                <img ng-src="img/work/illustrations/thumbs/{{item.shortname}}.jpg" alt="<i class='fa fa-question-circle'></i>&nbsp;&nbsp; {{item.description}} <br /><i class='fa fa-paw'></i>&nbsp;&nbsp;Medium: {{item.medium}}">
+                <img ng-src="img/work/illustrations/thumbs/{{item.shortname}}.jpg" ng-attr-alt="{{item.name}} - {{item.description}} (Illustration)" loading="lazy">
               </li>
 
               <!--Package Design Start-->
@@ -250,9 +255,10 @@
                 <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="{{item.name}}" ng-href="img/work/package-design/full/{{item.shortname}}-full.jpg" alt="{{item.name}}">
                   <span class="overlay-img"></span>
                   <span class="overlay-img-thumb font-icon-plus"></span>
+                  <span class="sr-only">View full image: {{item.name}} (Package Design)</span>
                 </a>
                 <!-- Thumb Image and Description -->
-                <img ng-src="img/work/package-design/thumbs/{{item.shortname}}.jpg" alt="<i class='fa fa-question-circle'></i>&nbsp;&nbsp; {{item.description}} <br /><i class='fa fa-coffee'></i>&nbsp;&nbsp;Medium: {{item.medium}}">
+                <img ng-src="img/work/package-design/thumbs/{{item.shortname}}.jpg" ng-attr-alt="{{item.name}} - {{item.description}} (Package Design)" loading="lazy">
               </li>
 
               <!-- Photography Start -->
@@ -261,20 +267,22 @@
                 <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="{{item.name}}" ng-href="img/work/creative-photography/full/{{item.shortname}}-full.jpg" alt="{{item.name}}">
                   <span class="overlay-img"></span>
                   <span class="overlay-img-thumb font-icon-plus"></span>
+                  <span class="sr-only">View full image: {{item.name}} (Creative Photography)</span>
                 </a>
                 <!-- Thumb Image and Description -->
-                <img ng-src="img/work/creative-photography/thumbs/{{item.shortname}}.jpg" alt="<i class='fa fa-question-circle'></i>&nbsp;&nbsp; {{item.description}} <br /><i class='fa fa-picture-o'></i>&nbsp;&nbsp;Medium: {{item.medium}}">
+                <img ng-src="img/work/creative-photography/thumbs/{{item.shortname}}.jpg" ng-attr-alt="{{item.name}} - {{item.description}} (Creative Photography)" loading="lazy">
               </li>
 
-							<!-- Fonts Start -->
+              <!-- Fonts Start -->
               <li class="item-thumbs span3 clearfix fonts" ng-repeat="item in fonts" style="min-height:183px; display:block;">
                 <!-- Full Image -->
                 <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="{{item.name}}" ng-href="img/work/font-development/full/{{item.shortname}}-full.jpg" alt="{{item.name}}">
                   <span class="overlay-img"></span>
                   <span class="overlay-img-thumb font-icon-plus"></span>
+                  <span class="sr-only">View full image: {{item.name}} (Font Development)</span>
                 </a>
                 <!-- Thumb Image and Description -->
-                <img ng-src="img/work/font-development/thumbs/{{item.shortname}}.jpg" alt="<i class='fa fa-question-circle'></i>&nbsp;&nbsp; {{item.description}} <br /><i class='fa fa-font'></i>&nbsp;&nbsp;Medium: {{item.medium}}">
+                <img ng-src="img/work/font-development/thumbs/{{item.shortname}}.jpg" ng-attr-alt="{{item.name}} - {{item.description}} (Font Development)" loading="lazy">
               </li>
 
               <!-- Portfolio placeholder - Holds Angular in Place -->
@@ -283,7 +291,7 @@
                   <span class="overlay-img"></span>
                   <span class="overlay-img-thumb font-icon-plus"></span>
                 </a>
-                <img ng-src="https://placehold.it/1x1" alt="placeholder image" style="height:0px !important;">
+                <img ng-src="https://placehold.it/1x1" alt="placeholder image" style="height:0px !important;" loading="lazy">
               </li>
 
             </ul>
@@ -320,13 +328,13 @@
           <ul class="chart">
 
             <li class="title" title="Adobe CC"></li>
-        		<li class="current" title="Adobe Photoshop"><span class="bar" data-number="90"></span><span class="number">90</span></li>
-        		<li class="past" title="Adobe Illustrator"><span class="bar" data-number="95"></span><span class="number">95</span></li>
+            <li class="current" title="Adobe Photoshop"><span class="bar" data-number="90"></span><span class="number">90</span></li>
+            <li class="past" title="Adobe Illustrator"><span class="bar" data-number="95"></span><span class="number">95</span></li>
             <li class="past" title="Adobe InDesign"><span class="bar" data-number="85"></span><span class="number">85</span></li>
 
             <li class="title" title="Client Side Coding"></li>
-        		<li class="current" title="HTML & XHTML"><span class="bar" data-number="95"></span><span class="number">95</span></li>
-        		<li class="past" title="CSS & CSS3"><span class="bar" data-number="90"></span><span class="number">90</span></li>
+            <li class="current" title="HTML & XHTML"><span class="bar" data-number="95"></span><span class="number">95</span></li>
+            <li class="past" title="CSS & CSS3"><span class="bar" data-number="90"></span><span class="number">90</span></li>
             <li class="past" title="Typescript"><span class="bar" data-number="60"></span><span class="number">60</span></li>
             <li class="past" title="Javascript"><span class="bar" data-number="60"></span><span class="number">60</span></li>
             <li class="past" title="jQuery"><span class="bar" data-number="70"></span><span class="number">70</span></li>
@@ -420,7 +428,7 @@
             <li class="past" title="Fontographer"><span class="bar" data-number="65"></span><span class="number">65</span></li>
           </ul>
           <p class="platform" style="margin:30px 0 0 30px;">
-            <img src="img/apple-logo.png" alt="David Manzer - Mac User" /> <span style="color:#7F8289; font-size:14px;">Platform of choice.</span>
+              <img src="img/apple-logo.png" alt="David Manzer - Mac User" loading="lazy" /> <span style="color:#7F8289; font-size:14px;">Platform of choice.</span>
           </p>
         </div>
         <!-- Chart End -->
@@ -479,13 +487,13 @@
 
         <div class="row">
           <!-- WAW Job -->
-        	<div class="span4 profile">
-          	<div class="image-wrap">
+          <div class="span4 profile">
+            <div class="image-wrap">
               <div class="hover-wrap">
                   <span class="overlay-img"></span>
                   <span class="overlay-text-thumb">Web Designer<br />Front End Developer</span>
               </div>
-              <img src="img/profile/profile-web-01.jpg" alt="Web Designer - Worldatwork">
+              <img src="img/profile/profile-web-01.jpg" alt="Web Designer - Worldatwork" loading="lazy">
             </div>
             <h3 class="profile-name">Worldatwork <a href="https://www.worldatwork.org" target="_blank"><i class="fa fa-external-link pull-right res" alt="David Manzer - Web Designer"></i></a></h3>
             <h4><small><span style="color:#fff;">Web Designer / Front End Developer</span><br />
@@ -501,7 +509,7 @@
                 <span class="overlay-img"></span>
                 <span class="overlay-text-thumb">Front End Developer</span>
               </div>
-              <img src="img/profile/profile-web-02.jpg" alt="Front End Developer - Anderson Advertising">
+              <img src="img/profile/profile-web-02.jpg" alt="Front End Developer - Anderson Advertising" loading="lazy">
             </div>
             <h3 class="profile-name">Anderson Advertising <a href="https://www.anderson-adv.com/" target="_blank"><i class="fa fa-external-link pull-right res"></i></a></h3>
             <h4><small><span style="color:#fff;">Front End Developer</span><br />
@@ -517,7 +525,7 @@
                 <span class="overlay-img"></span>
                 <span class="overlay-text-thumb">Web Designer</span>
               </div>
-              <img src="img/profile/profile-web-03.jpg" alt="Web Designer - AngelMedFlight">
+              <img src="img/profile/profile-web-03.jpg" alt="Web Designer - AngelMedFlight" loading="lazy">
             </div>
             <h3 class="profile-name">AngelMedFlight <a href="https://www.angelmedflight.com/" target="_blank"><i class="fa fa-external-link pull-right res"></i></a></h3>
             <h4><small><span style="color:#fff;">Web Designer</span><br />
@@ -630,7 +638,7 @@
 
 <!-- Socialize -->
 <div id="social-area" class="page">
-	<div class="container">
+  <div class="container">
     <div class="row">
       <div class="span12">
         <nav id="social">
@@ -648,26 +656,26 @@
 
 <!-- Footer -->
 <footer>
-	<p class="credits">&copy;<span id="year"></span> David Manzer<br>
+  <p class="credits">&copy;<span id="year"></span> David Manzer<br>
     Front End Web Developer / UI/UX Specialist</p>
 </footer>
 <!-- End Footer -->
 
 <!-- Back To Top -->
 <a id="back-to-top" href="#">
-	<i class="font-icon-arrow-simple-up"></i>
+  <i class="font-icon-arrow-simple-up"></i>
 </a>
 <!-- End Back to Top -->
 
 <!-- Js -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script src="js/supersized.3.2.7.min.js"></script> <!-- Slider -->
-<script src="js/waypoints.js"></script> <!-- WayPoints -->
-<script src="js/waypoints-sticky.js"></script> <!-- Waypoints for Header -->
-<script src="js/jquery.isotope.js"></script> <!-- Isotope Filter -->
-<script src="js/jquery.fancybox.pack.js"></script> <!-- Fancybox -->
-<script src="js/plugins.js"></script><!-- Contains: jPreloader, jQuery Easing, jQuery ScrollTo, jQuery One Page Navi -->
-<script src="js/main.js"></script>
+<script src="js/supersized.3.2.7.min.js" defer></script> <!-- Slider -->
+<script src="js/waypoints.js" defer></script> <!-- WayPoints -->
+<script src="js/waypoints-sticky.js" defer></script> <!-- Waypoints for Header -->
+<script src="js/jquery.isotope.js" defer></script> <!-- Isotope Filter -->
+<script src="js/jquery.fancybox.pack.js" defer></script> <!-- Fancybox -->
+<script src="js/plugins.js" defer></script><!-- Contains: jPreloader, jQuery Easing, jQuery ScrollTo, jQuery One Page Navi -->
+<script src="js/main.js" defer></script>
 <!-- End Js -->
 
 <!-- Hotjar Tracking Code for //www.davidmanzer.info -->
