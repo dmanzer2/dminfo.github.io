@@ -34,6 +34,21 @@ body{
 	border: 0;
 }
 
+#dev a {
+	color: #fff;
+	text-decoration: underline;
+}
+
+#dev a:hover {
+	color: #d71f26;
+	text-decoration: none;
+}
+
+#dev .dev-header {
+	color: #d71f26;
+	font-size: 18px;
+}
+
 a {
 	color:#d71f26;
 	text-decoration: none;
