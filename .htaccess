@@ -1,0 +1,19 @@
+# GitHub Pages + Cloudflare optimized configuration
+# Note: Most server-level optimizations are handled by Cloudflare
+
+# Basic security headers (GitHub Pages compatible)
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options nosniff
+    Header always set X-Frame-Options DENY
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# Custom error pages (optional)
+ErrorDocument 404 /404.html
+
+# Prevent access to sensitive files
+<Files ~ "^\.">
+    Order allow,deny
+    Deny from all
+</Files>
