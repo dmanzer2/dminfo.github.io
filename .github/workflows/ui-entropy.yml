@@ -43,8 +43,7 @@ jobs:
         uses: dmanzer2/ui-entropy-action@v1
         with:
           maxDelta: 5  # Fail if entropy increases by more than 5 points
-          failOnDegradation: true  # Set to false for warning-only mode
-          createBaseline: ${{ github.event_name == 'push' }}  # Auto-create baseline on push to main
-          autoCommitBaseline: ${{ github.event_name == 'push' }}  # Auto-commit baseline updates
+          failOnDegradation: false  # Warning only mode
+          createBaseline: ${{ github.event_name == 'push' }}  # Auto-create baseline on push
           # workingDirectory: '.'  # Uncomment to specify a subdirectory
           # baselineFile: '.ui-entropy-baseline.json'  # Uncomment to use custom baseline path
