@@ -5,9 +5,9 @@ name: UI Entropy Check
 
 on:
   pull_request:
-    branches: [main, master]  # Adjust branch names as needed
+    branches: [gh-pages]  # Main branch for this GitHub Pages repo
   push:
-    branches: [main, master]  # Adjust branch names as needed
+    branches: [gh-pages]  # Main branch for this GitHub Pages repo
 
 jobs:
   entropy-check:
