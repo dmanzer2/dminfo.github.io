@@ -1,0 +1,12 @@
+{
+  "cssPattern": "**/*.css",
+  "sourcePattern": "**/*.{html,js,jsx,ts,tsx}",
+  "ignorePatterns": [
+    "node_modules/**",
+    "dist/**",
+    "build/**",
+    ".next/**",
+    "out/**"
+  ],
+  "threshold": 50
+}
