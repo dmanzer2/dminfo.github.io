@@ -1,4 +1,4 @@
 User-agent: *
-Disallow:
+Disallow: /quotes/
 
 Sitemap: https://davidmanzer.info/sitemap.xml

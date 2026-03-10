@@ -1,0 +1,50 @@
+# UI Entropy Check Workflow Template
+# Copy this file to: .github/workflows/ui-entropy.yml
+
+name: UI Entropy Check
+
+on:
+  pull_request:
+    branches: [main, master]  # Adjust branch names as needed
+  push:
+    branches: [main, master]  # Adjust branch names as needed
+
+jobs:
+  entropy-check:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # Required for auto-committing baseline updates
+      pull-requests: read
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Fetch baseline from main branch (for PRs)
+        if: github.event_name == 'pull_request'
+        run: |
+          git fetch origin ${{ github.base_ref }}:refs/remotes/origin/${{ github.base_ref }}
+          git show origin/${{ github.base_ref }}:.ui-entropy-baseline.json > .ui-entropy-baseline.json 2>/dev/null || echo "No baseline found on base branch"
+      
+      # Add build steps here if needed (Node.js, npm install, build, etc.)
+      # Example for Next.js/React projects:
+      # - name: Setup Node.js
+      #   uses: actions/setup-node@v4
+      #   with:
+      #     node-version: '18'
+      #
+      # - name: Install dependencies
+      #   run: npm install
+      #
+      # - name: Build project
+      #   run: npm run build
+      
+      - name: Check CSS Entropy
+        uses: dmanzer2/ui-entropy-action@v1
+        with:
+          maxDelta: 5  # Fail if entropy increases by more than 5 points
+          failOnDegradation: true  # Set to false for warning-only mode
+          createBaseline: ${{ github.event_name == 'push' }}  # Auto-create baseline on push to main
+          autoCommitBaseline: ${{ github.event_name == 'push' }}  # Auto-commit baseline updates
+          # workingDirectory: '.'  # Uncomment to specify a subdirectory
+          # baselineFile: '.ui-entropy-baseline.json'  # Uncomment to use custom baseline path
